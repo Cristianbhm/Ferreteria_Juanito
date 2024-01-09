@@ -1,0 +1,5 @@
+D:\Proyectos\Ferreteria_Juanito\APISistema.BO\bin\Debug\APISistema.BO.dll
+D:\Proyectos\Ferreteria_Juanito\APISistema.BO\bin\Debug\APISistema.BO.pdb
+D:\Proyectos\Ferreteria_Juanito\APISistema.BO\obj\Debug\APISistema.BO.csproj.CoreCompileInputs.cache
+D:\Proyectos\Ferreteria_Juanito\APISistema.BO\obj\Debug\APISistema.BO.dll
+D:\Proyectos\Ferreteria_Juanito\APISistema.BO\obj\Debug\APISistema.BO.pdb

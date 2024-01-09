@@ -1,0 +1,79 @@
+﻿
+@model Ferreteria_Juanito.Models.UsuarioModel
+@*<iframe onload="cargaTblsUsuario()" hidden></iframe>*@
+<div>
+    <h3>Agregar/Editar Usuarios</h3>
+    <div class="container">
+        <div class="row">
+            @using (Html.BeginForm(null, null, FormMethod.Post, htmlAttributes: new { id = "usuarios-form" }))
+            {
+            <div class="col-lg-4">
+                @Html.TextBoxFor(m => m.idUsuario, new { @class = "form-control hidden", @id = "idUsuarioPk" })
+                <div class="form-group">
+                    <label for="idUsuario">Usuario</label>
+                    @Html.TextBoxFor(m => m.usuario, new { @class = "form-control", @id = "idUsuario", @placeholder = "Ingrese Usuario" })
+                </div>
+                <div class="form-group">
+                    <label for="idPassword">Contraseña</label>
+                    @Html.TextBoxFor(m => m.passUsuario, new { @class = "form-control", @id = "idPassword", @placeholder = "Ingrese Contraseña" , @type = "password"})
+
+                </div>
+            </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="idNombre">Nombre</label>
+                        @Html.TextBoxFor(m => m.nombreUsuario, new { @class = "form-control", @id = "idNombre", @placeholder = "ingrese Nombre" })
+           
+                    </div>
+                    <div class="form-group">
+                        <label for="idApellido">Apellido</label>
+                        @Html.TextBoxFor(m => m.apellidoUsuario, new { @class = "form-control", @id = "idApellido", @placeholder = "Ingrese Apellido" })
+    
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="idEmail">Email</label>
+                        @Html.TextBoxFor(m => m.mailUsuario, new { @class = "form-control", @id = "idEmail", @placeholder = "Ingrese email", @type = "email" })
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idRol">Rol</label>
+                        @Html.DropDownListFor(m => m.idRol, new SelectList(ViewBag.Rol, "idRol", "nombreRol"), new { @class = "form-control", @id = "idRol", @placeholder = "Ingrese email", @type = "email" })
+                    </div>
+
+                </div>
+            }
+            <div class="form-group">
+                <button class="btn btn-success" id="btnGuardarUsuario" onclick="setInsertaUsuario()" style="margin-left: 1%"> Guardar</button>
+                <button class="btn btn-success" id="btnActualizarUsuario" onclick="setUpdateUsuario()" style="display: none; margin-left: 1%"> Actualizar</button>
+                <button class="btn btn-default" id="btnLimpiarformUsuario" onclick="limpaFormUsuarios()"> Limpiar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="">
+    <h3>Lista de Usuarios</h3>
+    <table align="center" border="1" style="width:auto; height:contain" class="table table-bordered table-hover table-condensed shadow-lg bg-white position-static" id="dataTableUsuario">
+        <thead>
+            <tr>
+                <th style="display:none">Id Usuario</th>
+                <th>Usuario</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Rol</th>
+                <th>Email</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+                <th style="display:none">rol</th>
+            </tr>
+        </thead>
+        <tbody id="tblUsuarios">                     
+        </tbody>
+
+    </table>
+</div>
+
+
+

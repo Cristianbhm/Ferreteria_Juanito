@@ -1,0 +1,15 @@
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\BD_FerreteriaJuanito\BD_FerreteriaJuanito.db
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\APISistema.Negocio.dll
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\APISistema.Negocio.pdb
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\APISistema.BO.dll
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\APISistema.Data.dll
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\System.Data.SQLite.dll
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\APISistema.BO.pdb
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\APISistema.Data.pdb
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\APISistema.Data.dll.config
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\bin\Debug\System.Data.SQLite.xml
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\obj\Debug\APISistema.Negocio.csproj.AssemblyReference.cache
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\obj\Debug\APISistema.Negocio.csproj.CoreCompileInputs.cache
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\obj\Debug\APISistema.Negocio.csproj.CopyComplete
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\obj\Debug\APISistema.Negocio.dll
+D:\Proyectos\Ferreteria_Juanito\APISistema.Negocio\obj\Debug\APISistema.Negocio.pdb

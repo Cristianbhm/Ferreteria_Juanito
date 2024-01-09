@@ -1,0 +1,93 @@
+﻿
+@model Ferreteria_Juanito.Models.ProductosModels
+<iframe onload="cargaTblsProductos()" hidden></iframe>
+<div>
+    <h3>Agregar/Editar Productos</h3>
+
+    <div class="container">
+        <div class="row">
+            @using (Html.BeginForm(null, null, FormMethod.Post, htmlAttributes: new { id = "prod-form" }))
+            {
+                <div class="col-lg-4">
+                    @Html.TextBoxFor(m => m.idProducto, new { @class = "form-control hidden", @id = "idProducto" })
+                    <div class="form-group">
+
+                        <label for="idNombreProducto">Nombre Producto</label>
+                        @Html.TextBoxFor(m => m.nombreProducto, new { @class = "form-control", @id = "idNombreProducto", @placeholder = "Ingrese Nombre" })
+                    </div>
+                    <div class="form-group">
+                        <label for="idCategoria">Categoría</label>
+                        @Html.TextBoxFor(m => m.categoriaProducto, new { @class = "form-control", @id = "idCategoria", @placeholder = "Ingrese Categoria" })
+
+                    </div>
+                    <div class="form-group">
+                        <label for="idDescripcion">Descripción</label>
+                        @Html.TextBoxFor(m => m.desAdicionalProducto, new { @class = "form-control", @id = "idDescripcion", @placeholder = "Descripción Producto" })
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="idValorNeto">Valor Neto ($)</label>
+                        @Html.TextBoxFor(m => m.valorNetoProducto, new { @class = "form-control", @onKeyUp = "calculo()", @id = "idValorNeto", @placeholder = "Valor neto Producto" })
+                    </div>
+                    <div class="form-group">
+                        <label for="idValorIva">Valor IVA ($)</label>
+                        @Html.TextBoxFor(m => m.valorIvaProducto, new { @class = "form-control", @id = "idValorIva", @placeholder = "Valor IVA Producto" })
+
+                    </div>
+                    <div class="form-group">
+                        <label for="idValorTotal">Valor Total ($)</label>
+                        @Html.TextBoxFor(m => m.valorTotalProducto, new { @class = "form-control", @id = "idValorTotal", @placeholder = "Valor total Producto" })
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="idStock">Cantidad de Stock</label>
+                        @Html.TextBoxFor(m => m.stockProducto, new { @class = "form-control", @id = "idStock", @placeholder = "Cantidad de Stock" })
+
+                    </div>
+                    <div class="form-group">
+                        <label for="idStock">Marca Producto</label>
+                        @Html.TextBoxFor(m => m.marcaProducto, new { @class = "form-control", @id = "idMarca", @placeholder = "Marca Producto" })
+                    </div>
+
+                    @*<div class="">
+                            <button class="btn btn-success" id="btnGuardarProd" onclick="setInsertaProducto()">Guardar</button>
+                            <button class="btn btn-success" id="btnActualizarProd" onclick="setUpdateProducto()" style="display:none">Actualizar</button>
+                            <button class="btn btn-default" id="btnLimpiarformulario" onclick="limpaFormProductos()">Limpiar</button>
+                        </div>*@
+                </div>
+            }
+            <div class="form-group" >
+                <button class="btn btn-success" id="btnGuardarProd" onclick="setInsertaProducto()" style="margin-left: 1%">Guardar</button>
+                <button class="btn btn-success" id="btnActualizarProd" onclick="setUpdateProducto()" style="display: none; margin-left: 1%">Actualizar</button>
+                <button class="btn btn-default" id="btnLimpiarformulario" onclick="limpaFormProductos()">Limpiar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="">
+    <h3>Lista de Productos</h3>
+    <table align="center" border="1" style="width:auto; height:contain" class="table table-bordered table-hover table-condensed shadow-lg bg-white position-static" id="dataTableProd">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Producto</th>
+                <th>Marca</th>
+                <th>Descripción Adicional</th>
+                <th>Categoria</th>
+                <th>Valor Neto</th>
+                <th>Valor IVA</th>
+                <th>Valor Total</th>
+                <th>Cantidad Stock</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="tblProductos">
+        </tbody>
+
+    </table>
+</div>
+
