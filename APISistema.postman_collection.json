@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "23a3cb12-f6bb-4735-8d0c-ec96a73844e6",
+		"name": "APISistema",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23960619"
+	},
+	"item": [
+		{
+			"name": "Actualiza Productos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idProducto\": 58,\r\n  \"nombreProducto\": \"Actualizado\",\r\n  \"valorNetoProducto\": 3,\r\n  \"valorIvaProducto\": 4,\r\n  \"valorTotalProducto\": 5,\r\n  \"desAdicionalProducto\": \"Actualizado\",\r\n  \"categoriaProducto\": \"Actualizado\",\r\n  \"stockProducto\": 8,\r\n  \"marcaProducto\": \"Actualizado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44311/api/UpdateProducto",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44311",
+					"path": [
+						"api",
+						"UpdateProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44311/api/Productos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44311",
+					"path": [
+						"api",
+						"Productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elimina Producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44311/api/DeleteProducto?_idProd=60",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44311",
+					"path": [
+						"api",
+						"DeleteProducto"
+					],
+					"query": [
+						{
+							"key": "_idProd",
+							"value": "60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserta Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombreProducto\": \"Nuevo Producto\",\r\n  \"valorNetoProducto\": 5670,\r\n  \"valorIvaProducto\": 1236,\r\n  \"valorTotalProducto\": 67789,\r\n  \"desAdicionalProducto\": \"Descripcion Nuevo Producto\",\r\n  \"categoriaProducto\": \"Herramienta\",\r\n  \"stockProducto\": 8,\r\n  \"marcaProducto\": \"Marca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44311/api/insertaProducto",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44311",
+					"path": [
+						"api",
+						"insertaProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44311/api/Usuarios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44311",
+					"path": [
+						"api",
+						"Usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserta Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuario\": \"usser\",\r\n  \"nombreUsuario\": \"Nombre Usuario\",\r\n  \"apellidoUsuario\": \"Apellido Usuario\",\r\n  \"mailUsuario\": \"prueba@gmail.com\",\r\n  \"passUsuario\": \"1234\",\r\n  \"idRol\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44311/api/InsertaUsuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44311",
+					"path": [
+						"api",
+						"InsertaUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Elimina Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44311/api/DeleteUsuario?_idUsuario=9",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44311",
+					"path": [
+						"api",
+						"DeleteUsuario"
+					],
+					"query": [
+						{
+							"key": "_idUsuario",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualiza Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idUsuario\": 10,\r\n  \"usuario\": \"Actualiza\",\r\n  \"nombreUsuario\": \"Actualiza\",\r\n  \"apellidoUsuario\": \"Actualiza\",\r\n  \"mailUsuario\": \"Actualiza\",\r\n  \"passUsuario\": \"1234\",\r\n  \"idRol\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44311/api/UpdateUsuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44311",
+					"path": [
+						"api",
+						"UpdateUsuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
